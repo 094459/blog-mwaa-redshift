@@ -16,7 +16,9 @@ props = {
     'mwaadag' : '{your airflow dag s3 bucket}',
     'mwaa-sg':'{your mwaa sg group}',
     'mwaa-vpc-id':'{your mwaa vpc id}',
-    'redshiftclustername':'mwaa-redshift-clusterxxx'
+    'redshiftclustername':'mwaa-redshift-clusterxxx',
+    'redshiftdb':'mwaa',
+    'redshiftusername':'awsuser'
     }
 
 app = core.App()
