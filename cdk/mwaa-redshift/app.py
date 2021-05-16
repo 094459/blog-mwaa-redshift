@@ -10,12 +10,12 @@ from mwaa_redshift.mwaa_redshift_vpc import MwaaRedshiftVPC
 # - the security group created and used by MWAA "mwaa-sg"
 # - the vpc id for your mwaa environment
 
-env_EU=core.Environment(region="eu-west-1", account="704533066374")
+env_EU=core.Environment(region="eu-west-1", account="XXXXXXXXXX")
 props = {
-    'redshifts3location': 'mwaa-redshift-blog',
-    'mwaadag' : 'airflow-094459',
-    'mwaa-sg':'sg-01f25764ea72db0f2',
-    'mwaa-vpc-id':'vpc-001c3b06c3e39c278',
+    'redshifts3location': '{your new s3 bucket for redhshift}',
+    'mwaadag' : '{your airflow dag s3 bucket}',
+    'mwaa-sg':'{your mwaa sg group}',
+    'mwaa-vpc-id':'{your mwaa vpc id}',
     'redshiftclustername':'mwaa-redshift-clusterxxx'
     }
 
