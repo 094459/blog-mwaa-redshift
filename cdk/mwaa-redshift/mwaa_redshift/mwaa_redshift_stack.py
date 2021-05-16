@@ -135,14 +135,14 @@ class MwaaRedshiftStack(core.Stack):
             self,
             "MWAARedshiftCluster",
              master_user=redshift.Login(
-                master_username="awsuser"
+                master_username=props['redshiftusername']
             ),
             vpc = vpc,
             security_groups=[default_redshift_security_group],
             node_type=redshift.NodeType.RA3_4XLARGE,
             number_of_nodes=2,
             cluster_name=redshiftclustername,
-            default_database_name="mwaa",
+            default_database_name=props['redshiftdb'],
             removal_policy=core.RemovalPolicy.DESTROY,
             roles=[mwaa_redshift_service_role],
             publicly_accessible=False,
