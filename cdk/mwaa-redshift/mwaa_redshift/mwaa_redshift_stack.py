@@ -105,7 +105,7 @@ class MwaaRedshiftStack(core.Stack):
             "RedshiftCSG",
             vpc = vpc,
             #vpc_subnets = ec2.SubnetSelection(subnets=vpc.private_subnets),
-            vpc_subnets = ec2.SubnetSelection(subnet_type=ec2.SubnetType.PUBLIC),
+            vpc_subnets = ec2.SubnetSelection(subnet_type=ec2.SubnetType.PRIVATE),
             description="Redshift Cluster Subnet Group"
         )
 
