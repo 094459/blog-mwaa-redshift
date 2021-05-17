@@ -11,6 +11,6 @@
     "redshift_secret_arn": "arn:aws:secretsmanager:eu-west-1:XXXXXXXXXX:secret:mwaa-redshift-cluster-XXXXX",
     "redshift_table_name": "movie_demo",
     "s3_bucket_name": "mwaa-redshift-094459",
-    "s3_key": "files/",
+    "s3_key": "files/*",
     "test_http": "https://grouplens.org/datasets/movielens/latest/"
 }
